@@ -76,7 +76,7 @@ const updateTask = async ({ command, ack, say }) => {
     fs.readFile('tasks.json', function (err, data) {
       const json = JSON.parse(data);
 
-      let newArray = [json.data];
+      let newArray = [...json.data];
 
       newArray[index] = {
         ...newArray[index],
